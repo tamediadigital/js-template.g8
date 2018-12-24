@@ -1,0 +1,8 @@
+setup:
+  - npm install --silent
+  - rm -rf dist
+test:
+  - npm test -- --verbose --coverage
+deploy:
+  - tdaci deploy
+  - tdaci aws/docker-build-and-push
